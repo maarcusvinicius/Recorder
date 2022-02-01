@@ -1,0 +1,25 @@
+{
+  "name": "Recorder",
+  "version": "1.0.0",
+  "description": "Recorder App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start_dev": "set NODE_ENV=development&&electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -c.mac.identity=null"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "build":{
+    "appId": "com.programadormarcu.recorder",
+    "win": {
+      "icon": "./assets/icons/icon.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^16.0.8",
+    "electron-builder": "^22.14.5"
+  }
+}

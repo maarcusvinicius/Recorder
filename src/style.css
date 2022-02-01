@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: flex;
+    padding: 10px;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: #123;
+    border-radius: 20px;
+    flex-grow: 1;
+}
+
+#display{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.record-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#record{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3px solid white
+}
+
+#record::after{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    transform: translate(-50%, -50%);
+    content: " ";
+    transition: all 0.3s;
+}
+
+.recording::after{
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 5px !important;
+}
+
+.hide{
+    opacity: 0 !important;
+}
+
+#mic-icon{
+    position: absolute;
+    width: 30px;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.preload *{
+    transition: none !important;
+}
+
+.group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;   
+    padding: 10px;
+}
+
+.group>input, .group>select{
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+}
